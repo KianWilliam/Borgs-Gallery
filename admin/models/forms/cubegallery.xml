@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form addfieldpath="/administrator/components/com_cubegallery/models/fields">
+    <fieldset name="general">
+		<field name="title"
+               type="text"
+               label="JGLOBAL_TITLE"
+               description="COM_CUBEGALLERY_TITLE_DESC"
+               class="inputbox"
+               size="30"
+               required="true"
+        />
+		<field name="alias"
+               type="text"
+               label="JFIELD_ALIAS_LABEL"
+               description="JFIELD_ALIAS_DESC"
+               class="inputbox"
+               size="30"
+        />
+		<field id="published"
+               name="published"
+               type="list"
+               label="JGLOBAL_STATE"
+               description="JFIELD_PUBLISHED_DESC"
+               class="inputbox"
+               size="1"
+               default="1"
+        >
+            <option value="1">
+                JPUBLISHED</option>
+            <option value="0">
+                JUNPUBLISHED</option>			
+        </field>
+		<field name="id"
+               type="text"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+               size="10"
+               default="0"
+               readonly="true"
+               class="readonly"
+        />
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+    </fieldset>
+		<fields name="params" >
+			<fieldset name="general_settings" label="General">
+				<field name="lib" type="list" label="COM_CUBEGALLERY_LIB_LABEL" description="COM_CUBEGALLERY_LIB_DESC">
+			       <option value="0">No</option>
+			       <option value="1">Yes</option>
+	            </field>
+				<field name="cube_width" 
+                   type="text" 
+                   label="COM_CUBEGALLERY_FIELD_WIDTH_LABEL"
+                   default="300"
+                   filter="integer"
+                   description="COM_CUBEGALLERY_FIELD_WIDTH_DESC">
+                </field>
+			    <field name="cube_height" 
+                   type="text" 
+                   label="COM_CUBEGALLERY_FIELD_HEIGHT_LABEL"
+                   default="300"
+                   filter="integer" 
+                   description="COM_CUBEGALLERY_FIELD_HEIGHT_DESC">
+                </field>
+				<field name="text_width" 
+                   type="text" 
+                   label="COM_CUBEGALLERY_TEXT_FIELD_WIDTH_LABEL"
+                   default="50"
+                   filter="integer" 
+                   description="COM_CUBEGALLERY_TEXT_FIELD_WIDTH_DESC">
+                </field>
+				<field name="cube_move_time" 
+                   type="text" 
+                   label="COM_CUBEGALLERY_MOVE_TIME_LABEL"
+                   default="1000"
+                   filter="integer" 
+                   description="COM_CUBEGALLERY_MOVE_TIME_DESC">
+                </field>
+				</fieldset>
+				<fieldset name="apperance_settings" label="Appearance">				
+				<field name="backgroundcolorgallery" 
+                   type="color" 
+                   label="COM_CUBEGALLERY_BACK_FIELD_BACKGROUNDCOLOR_LABEL"
+                   default="#CACACA"
+                   description="COM_CUBEGALLERY_BACK_FIELD_BACKGROUNDCOLOR_DESC">
+                </field>
+				<field name="backgroundcolortext" 
+                   type="color" 
+                   label="COM_CUBEGALLERY_TEXT_FIELD_BACKGROUNDCOLOR_LABEL"
+                   default="#A1A1A1"
+                   description="COM_CUBEGALLERY_TEXT_FIELD_BACKGROUNDCOLOR_DESC">
+                </field>
+				<field name="bordercolortext" 
+                   type="color" 
+                   label="COM_CUBEGALLERY_TEXT_FIELD_BORDERCOLOR_LABEL"
+                   default="#A3A3A3"
+                   description="COM_CUBEGALLERY_TEXT_FIELD_BORDERCOLOR_DESC">
+                </field>
+				<field name="font_color" 
+                   type="color" 
+                   label="COM_CUBEGALLERY_FIELD_FONTCOLOR_LABEL"
+                   default="#000000"
+                   description="COM_CUBEGALLERY_FIELD_FONTCOLOR_DESC">
+                </field>
+				<field name="font_style" type="list" label="COM_CUBEGALLERY_FONTSTYLE_LABEL" description="COM_CUBEGALLERY_FONTSTYLE_DESC">
+			       <option value="0">normal-normal</option>
+			       <option value="1">bold-normal</option>
+				   <option value="2">normal-italic</option>
+			       <option value="3">bold-italic</option>
+	            </field>
+				<field name="font_size" 
+                   type="text" 
+                   label="COM_CUBEGALLERY_TEXT_FIELD_FONTSIZE_LABEL"
+                   default="12"
+                   filter="integer" 
+                   description="COM_CUBEGALLERY_TEXT_FIELD_FONTSIZE_DESC">
+                </field>
+				<field name="font_family" 
+                   type="text" 
+                   label="COM_CUBEGALLERY_TEXT_FIELD_FONTFAMILY_LABEL"
+                   default="arial"
+                   filter="raw" 
+                   description="COM_CUBEGALLERY_TEXT_FIELD_FONTFAMILY_DESC">
+                </field>
+			</fieldset>
+			<fieldset name="image_settings" label="Images">
+			    <field type="media"  name="cubeimage1" label="COM_CUBEGALLERY_SELECT_IMAGE_LABEL" description="COM_CUBEGALLERY_SELECT_IMAGE_DESC" />
+		        <field type="text"   name="cubeimgtxt1" label="COM_CUBEGALLERY_IMAGE_TEXT_LABEL" description="COM_CUBEGALLERY_IMAGE_TEXT_DESC" filter="raw"  />
+		        <field type="spacer" name="mySpacer1" hr="true" />
+				<field type="media"  name="cubeimage2" label="COM_CUBEGALLERY_SELECT_IMAGE_LABEL" description="COM_CUBEGALLERY_SELECT_IMAGE_DESC" />
+		        <field type="text"   name="cubeimgtxt2" label="COM_CUBEGALLERY_IMAGE_TEXT_LABEL" description="COM_CUBEGALLERY_IMAGE_TEXT_DESC" filter="raw"  />
+		        <field type="spacer" name="mySpacer2" hr="true" />
+				<field type="media"  name="cubeimage3" label="COM_CUBEGALLERY_SELECT_IMAGE_LABEL" description="COM_CUBEGALLERY_SELECT_IMAGE_DESC" />
+		        <field type="text"   name="cubeimgtxt3" label="COM_CUBEGALLERY_IMAGE_TEXT_LABEL" description="COM_CUBEGALLERY_IMAGE_TEXT_DESC" filter="raw"  />
+		        <field type="spacer" name="mySpacer3" hr="true" />
+				<field type="media"  name="cubeimage4" label="COM_CUBEGALLERY_SELECT_IMAGE_LABEL" description="COM_CUBEGALLERY_SELECT_IMAGE_DESC" />
+		        <field type="text"   name="cubeimgtxt4" label="COM_CUBEGALLERY_IMAGE_TEXT_LABEL" description="COM_CUBEGALLERY_IMAGE_TEXT_DESC" filter="raw"  />
+		        <field type="spacer" name="mySpacer4" hr="true" />
+				<field type="media"  name="cubeimage5" label="COM_CUBEGALLERY_SELECT_IMAGE_LABEL" description="COM_CUBEGALLERY_SELECT_IMAGE_DESC" />
+		        <field type="text"   name="cubeimgtxt5" label="COM_CUBEGALLERY_IMAGE_TEXT_LABEL" description="COM_CUBEGALLERY_IMAGE_TEXT_DESC" filter="raw"  />
+		        <field type="spacer" name="mySpacer5" hr="true" />
+				<field type="media"  name="cubeimage6" label="COM_CUBEGALLERY_SELECT_IMAGE_LABEL" description="COM_CUBEGALLERY_SELECT_IMAGE_DESC" />
+		        <field type="text"   name="cubeimgtxt6" label="COM_CUBEGALLERY_IMAGE_TEXT_LABEL" description="COM_CUBEGALLERY_IMAGE_TEXT_DESC" filter="raw"  />
+		        <field type="spacer" name="mySpacer6" hr="true" />				
+			</fieldset>
+		</fields>
+
+
+</form>

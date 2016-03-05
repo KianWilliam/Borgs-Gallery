@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="package" version="3.x" method="upgrade">
+ <identifier>pkg:cubegallery</identifier>
+ <name>Cubegallery Package</name>
+ <author>Kian William Nowrouzian</author>
+ <creationDate>Jan 2016</creationDate>
+ <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+ <packagename>cubegallery</packagename>
+ <version>1.0.0</version>
+ <url>http://www.myextenstions.lord121.ir</url>
+ <packager>Kian William Nowrouzian</packager>
+ <packagerurl>http://www.myextenstions.lord121.ir</packagerurl>
+ <description><![CDATA[<div style="color:#fff; background-color:#f015d9; padding:5px;">The complete package of cube-gallery including both component and module, Enjoy!</div> ]]></description>
+ <update>http://www.myextenstions.lord121.ir</update>
+ <files>
+   <file type="component" id="com_cubegallery" >admin.zip</file>
+   <file type="module" id="mod_cubegallery" client="site">modules.zip</file>
+</files>
+ </extension>
